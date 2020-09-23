@@ -1,0 +1,45 @@
+DevCon 3.0.4 Fatty Edition
+Please See LICENSE.txt for license information.
+
+Bug/Version History: 
+3.0 -  Fixed numerous problems with GUI.
+3.0.2 - Major fixes to memory handling and added 
+DNS look-up and Telnet (Shelled From /windows/system32)
+3.0.3 -  Again added some memory fixes. Also added 
+system tray support. Minor GUI changes. Fixed save log problem, I hope:)
+3.0.4 Fatty Edition -
+ Minor GUI changes (from spanish to english/spinglish to english =-D)
+ Removed last little annoying bits of Spanish from UI/MsgBox's
+ Splash screen now does not require a key to be pressed and loads main form.
+ Little bug where saved password wouldn't load when first clicking profile
+ Removed a useless form (REMOVE.frm lol)
+ Coding indented to be more readable
+ Clock space not so cramped anymore.
+ Tried fixing connection freezing problem, but because we connect using wininet
+API's, and we don't directly deal with the FTP protocol, we cannot eliminate the
+UI freeze while connecting to a server. Dealing directly with the FTP protocol
+using Winsock would eliminate any freezing, but also add a lot of coding. Which is
+why wininet was made in the first place. Ahh what we give up for ease of use, VB
+is a prime example! LOLOL
+ Fixed bug where if file was first in box it wouldn't work correctly when right clicking.
+this bug was from For i = 1 To ListView2.ListItems.Count, Index's start at 0, not 1.
+ Removed frmAbout and just used Splash instead, looks much better.
+NOTE: There were a couple of missing images on some forms, I left them missing
+     because I'd never had them, and I've never seen them.
+ 
+
+ShortCuts:
+CTRL + M - Send To Tray
+CTRL + O - Open Log
+CTRL + S - Save Log
+CTRL + E - Connect To Server
+CTRL + Q - Disconnect 
+F4       - Exit
+CTRL + U - Upload
+CTRL + D - Download
+
+Capabilities:
+
+This is an update to the old DevCon 3.0 FTP Client. Which is an update to yzyFTP.
+It has support for Local and remote file manipulation, via FTP. It can use ASCII or
+binary. This client still has some work to be done like CHMOD.
